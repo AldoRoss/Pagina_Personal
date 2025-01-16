@@ -1,0 +1,103 @@
+body {
+    background-color: #F8A4A4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+
+/* Contenedor principal del juego */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Botón de regresar en la parte superior izquierda */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Título de la pantalla */
+h1 {
+    font-size: 6rem;
+    color: #ffffff;
+    font-weight: bold; /* Negritas */
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold; /* Negritas */
+}
+
+h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold; /* Negritas */
+}
+
+/* Imagen Seleccionada al azar */
+.img {
+    position: relative;
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex; /* Flexbox para alinear en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espaciado entre botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+
+/* Botón grande de inicio */
+.again-button {
+    background-color: #49B37C;
+    font-weight: bold; /* Negritas */
+    margin: 80px;
+    color: white;
+    font-size: 4rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.again-button:hover {
+    background-color: #3a8c62;
+}
+
+/* Botón grande de inicio */
+.start-button {
+    background-color: #ffb72c;
+    font-weight: bold; /* Negritas */
+    margin: 80px;
+    color: white;
+    font-size: 4rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #d39926;
+}
+

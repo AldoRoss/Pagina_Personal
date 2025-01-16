@@ -1,0 +1,34 @@
+<%- include('./partials/_header') %>
+
+<link rel="stylesheet" href="/css/cuentame_algo.css">
+
+<div class="game-container">
+    <!-- Botón de Regresar -->
+    <a href="/settingCA">
+        <img src="/img/back-icon.png" alt="Regresar" class="back-button" />
+    </a>
+
+    <!-- Título de la pantalla -->
+    <h1>Cuéntame Algo</h1>
+    
+
+    <!-- Frase y Imagen -->
+    <div class="difficulty-menu">
+        <!-- Aquí se mostrará la imagen y la frase -->
+        <h2 class="phrase">Aquí va la Oración</h2>
+        <h3><strong></strong> <span id="output">...</span></h3>
+        <img class="img" src="" alt="Imagen de la frase" />
+    </div>
+
+    <div class="button-container">
+        <!-- Botón para Iniciar el Juego -->
+        <button class="start-button" id="startButton" onclick="changeButton()">Iniciar</button>
+        <!-- Imagen a la derecha del botón -->
+        <img class="img-right" src="/img/CuentameAlgo/pastillaDormida.png" alt="Imagen a la derecha" />
+    </div>
+    
+</div>
+
+<script src="/js/cuentame_algo.js"></script>
+
+<%- include('./partials/_footer') %>

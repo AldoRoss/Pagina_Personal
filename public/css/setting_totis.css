@@ -1,0 +1,136 @@
+body {
+    background-color: #fff4e3;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+
+/* Contenedor principal del juego */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Botón de regresar en la parte superior izquierda */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Título de la pantalla */
+h1 {
+    font-size: 5rem;
+    color: #ff9441;
+    font-weight: bold; /* Negritas */
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #000000;
+    font-weight: bold; /* Negritas */
+}
+
+h3 {
+    font-size: 2rem;
+    color: #a9a9a9;
+    font-weight: bold; /* Negritas */
+}
+
+h4 {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 2rem;
+    font-weight: bold; 
+    color: #a9a9a9;
+    text-align: justify;
+}
+
+/* Menú de selección de dificultad */
+.difficulty-menu {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Estilo para el input*/
+input[type="number"] {
+    font-size: 2rem;
+    font-weight: bold; /* Negritas */
+    color: #333;
+    width: 80px;
+    text-align: center;
+    background-color: #d9d9d9;
+    border: 2px solid #000;
+    border-radius: 0px;
+  }
+
+/* Estilo para los botones subir y bajar*/
+.level-button {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    background-color:  #ffb72c; /* Color para el botón - */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .level-button:last-of-type {
+    background-color:  #ffb72c; /* Color para el botón + */
+  }
+
+/* Estilo de los botones de dificultad */
+.difficulty-button {
+    background-color: #d9d9d9;
+    border: 2px solid #000;
+    border-radius: 0px;
+    padding: 15px 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold; /* Negritas */
+
+    transition: background-color 0.3s ease;
+}
+
+.difficulty-button:hover {
+    background-color: #a9a9a9;
+    color: #000000;
+}
+
+/* Estilo del botón de dificultad seleccionado */
+.difficulty-button.selected {
+    background-color: #ff9441;
+    color: #fff;
+}
+
+/* Botón grande de inicio */
+.start-button {
+    background-color: #ffb72c;
+    font-weight: bold; /* Negritas */
+    margin: 80px;
+    color: white;
+    font-size: 4rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #d39926;
+}

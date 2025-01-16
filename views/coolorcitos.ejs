@@ -1,0 +1,41 @@
+<%- include('./partials/_header') %>
+
+<link rel="stylesheet" href="/css/coolorcitos.css" />
+
+<div class="game-container">
+    <!-- Botón de Regresar -->
+    <a href="/panelDeJuegos">
+        <img src="/img/back-icon.png" alt="Regresar" class="back-button" />
+    </a>
+
+    <!-- Título del Juego -->
+    <h1 class="game-title">Coolorcitos</h1>
+
+    <!-- Contenedor de zonas de colores -->
+    <div class="slots">
+        <div class="slot" data-color="red" id="slot1"></div>
+        <div class="slot" data-color="blue" id="slot2"></div>
+        <div class="slot" data-color="green" id="slot3"></div>
+        <div class="slot" data-color="yellow" id="slot4"></div>
+        <div class="slot" data-color="green" id="slot5"></div>
+        <div class="slot" data-color="blue" id="slot6"></div>
+        <div class="slot" data-color="yellow" id="slot1"></div>
+        <div class="slot" data-color="red" id="slot2"></div>
+
+
+    <!-- Contenedor de imágenes arrastrables -->
+    <div class="draggable-container">
+        <img src="/img/coolorcitos/pollito.png" class="draggable" draggable="true" data-color="yellow" alt="Pollito Amarillo">
+        <img src="/img/coolorcitos/pintura.png" class="draggable" draggable="true" data-color="red" alt="Moño Rojo">
+        <img src="/img/coolorcitos/rana.png" class="draggable" draggable="true" data-color="green" alt="Rana Verde">
+        <img src="/img/coolorcitos/moras.png" class="draggable" draggable="true" data-color="blue" alt="Ballena Azul">
+        <img src="/img/coolorcitos/banana.png" class="draggable" draggable="true" data-color="yellow" alt="Banana">
+        <img src="/img/coolorcitos/ballena.png" class="draggable" draggable="true" data-color="blue" alt="Ballena">
+        <img src="/img/coolorcitos/moño.png" class="draggable" draggable="true" data-color="red" alt="Moño Rojo">
+        <img src="/img/coolorcitos/shrek.png" class="draggable" draggable="true" data-color="green" alt="Shrek">
+    </div>
+</div>
+
+<script src="/js/coolorcitos.js"></script>
+
+<%- include('./partials/_footer') %>

@@ -1,0 +1,30 @@
+<%- include('./partials/_header') %>
+
+<link rel="stylesheet" href="/css/error_ca.css">
+
+<audio id="screenSound" src="/sounds/error.mp3"></audio>
+
+
+<div class="game-container">
+    <!-- Botón de Regresar -->
+    <a href="/settingTotis">
+        <img src="/img/back-icon.png" alt="Regresar" class="back-button" />
+    </a>
+
+    <!-- Título de la pantalla -->
+    <h1>¡UPS!</h1>
+
+    <div class="difficulty-menu">
+        <img src="/img/monitoTriste.png" alt="Monito Triste" class="img" />
+        <h2>Perdiste</h2>
+    </div>
+
+    <div class="button-container">
+        <!-- Botón para Siguiente -->
+        <button class="start-button" id="startButton" onclick="changeButton()">Siguiente</button>
+    </div>
+</div>
+
+<script src="/js/perdiste.js"></script>
+
+<%- include('./partials/_footer') %>

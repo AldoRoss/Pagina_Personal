@@ -1,0 +1,106 @@
+/* Ajustar el contenedor del tablero */
+
+body{
+    background-color: #84caed;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr); /* 9 filas */
+    grid-template-columns: repeat(9, 1fr); /* 6 columnas */
+    gap: 1px; /* Espaciado entre celdas */
+    width: 100%; /* Ancho del tablero */
+    max-width: 820px; /* Ancho máximo */
+    aspect-ratio: 9 / 6; /* Mantener proporción de 6 columnas x 9 filas */
+    margin: 0 auto; /* Centrar el tablero */
+    background-color: #f0f0f0; /* Fondo del tablero */
+    border: 2px solid #ccc; /* Borde del tablero */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Celdas del tablero */
+.cell {
+    position: relative;
+    background-color: white; /* Fondo de cada celda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    overflow: hidden; /* Ocultar contenido que se desborde */
+}
+
+/* Tamaño de las imágenes dentro de las celdas */
+.cell img {
+    max-width: 90%; /* Ajustar al 90% del tamaño de la celda */
+    max-height: 90%; /* Mantener proporción dentro del 90% */
+    object-fit: contain; /* Escalar sin distorsionar */
+}
+
+/* Menú de movimientos */
+.movement-menu {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Espaciado entre cartas de movimiento */
+    margin-top: 20px;
+}
+
+.movement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.movement-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.movement-card img {
+    max-width: 130px;
+    max-height: 130px;
+    object-fit: contain;
+    margin-bottom: 0px;
+}
+
+/* Texto de movimientos restantes */
+.movement-card p {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+/* Botón de regresar */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* Contenedor para cada carta de movimiento y su texto */
+.movement-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para el span debajo de la carta */
+.remaining {
+    font-weight: bold; /* Texto en negritas */
+    font-size: 35px; /* Tamaño grande */
+    margin-top: 5px; /* Espaciado entre la carta y el texto */
+    color: #333; /* Color del texto */
+}

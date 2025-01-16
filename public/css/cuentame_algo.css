@@ -1,0 +1,97 @@
+body {
+    background-color: #2A4674;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+}
+
+/* Contenedor principal del juego */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+/* Botón de regresar en la parte superior izquierda */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Título de la pantalla */
+h1 {
+    font-size: 5rem;
+    color: #FFC544;
+    font-weight: bold; /* Negritas */
+    margin: 750px 0 0 0; /* Solo margen superior de 10px */
+    text-align: center; /* Opcional: centrar el texto horizontalmente */
+}
+
+
+h2 {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: bold; /* Negritas */
+}
+
+h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold; /* Negritas */
+}
+
+/* Imagen Seleccionada al azar */
+.img {
+    position: relative;
+    width: 20%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* Botón grande de inicio */
+.start-button {
+    background-color: #ffb72c;
+    font-weight: bold; /* Negritas */
+    margin: 80px;
+    color: white;
+    font-size: 4rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #d39926;
+}
+
+.start-button.clicked {
+    background-color: #F8A4A4; /* Cambiar color cuando se presiona */
+    color: white; /* Cambiar el color del texto si se desea */
+}
+
+.button-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 10px; /* Espaciado entre el botón y la imagen */
+    margin-top: 20px; /* Espaciado superior para separar del contenido previo */
+}
+
+.img-right {
+    padding-left: 10;
+    width: 15%; /* Tamaño de la imagen */
+    height: auto; /* Tamaño de la imagen */
+}
