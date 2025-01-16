@@ -52,26 +52,6 @@ router.get('/felicidadesC', (req, res) => {
     res.render('felicidadesC')
 });
 
-router.get('/error', (req, res) => {
-    res.render('error')
-});
-
-
-router.get('/totis', (req, res) => {
-    const playerRow = Math.floor(Math.random() * 9);
-    const playerCol = Math.floor(Math.random() * 6);
-    const totisRow = Math.floor(Math.random() * 9);
-    const totisCol = Math.floor(Math.random() * 6);
-    const remainingMoves = { up: 5, down: 5, left: 5, right: 5 }; // Ejemplo
-
-    res.render('totis', {
-        playerRow,
-        playerCol,
-        totisRow,
-        totisCol,
-        remainingMoves,
-    });
-});
 
 
 

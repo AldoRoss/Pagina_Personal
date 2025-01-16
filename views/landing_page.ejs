@@ -1,17 +1,40 @@
 <%- include('./partials/_header') %>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/landing_page.css" />
-    <div class="container">
-        <div class="column column-left">
-            <h1 class="title">La Casa de los Juegos</h1>
-            <a class="big-button" href="/panelDeJuegos">Empezar</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" href="/css/landing_page.css"> <!-- Asegúrate de tener este archivo -->
+</head>
+<body>
+  <div class="landing-container">
+    <!-- Imagen de fondo -->
+    <div class="background-image"></div>
 
-        </div>
-        <div class="column column-right">
-            <img src="./img/figuras.png" alt="Descripción de la imagen" class="image">
-        </div>
+    <!-- Contenedor principal -->
+    <div class="content-container">
+      <!-- Imagen en forma de círculo -->
+      <div class="profile-image">
+        <img src="/images/Aldo.jpg" alt="Mi Foto">
+      </div>
+
+      <!-- Título y descripción -->
+      <h1 class="landing-title">¡Bienvenido a mi página personal!</h1>
+      <p class="landing-description">
+        Aquí encontrarás información sobre mí, mis proyectos y mis intereses. ¡Explora y conoce más!
+      </p>
+
+      <!-- Botón de iniciar -->
+      <button class="start-button" onclick="window.location.href='/inicio'">Iniciar</button>
     </div>
+  </div>
+
+  <script src="/js/landing_page.js"></script> <!-- Archivo de JavaScript si es necesario -->
+</body>
+</html>
 
 
-    <%- include('./partials/_footer') %>
+
+<%- include('./partials/_footer') %>
