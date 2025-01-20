@@ -17,8 +17,71 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- CDN Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <!-- index css -->
-    <link rel="stylesheet" href="/css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
+
+<header class="header">
+    <div class="header-container">
+      <img src="/images/Logo-Compress.png" alt="Logo" class="header-logo">
+      <nav class="nav-menu">
+        <a href="/home" class="nav-link">Inicio</a>
+        <a href="/information" class="nav-link">Información</a>
+        <a href="/projects" class="nav-link">Proyectos</a>
+        <a href="/photos" class="nav-link">Fotos</a>
+      </nav>
+    </div>
+</header>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+    /* Estilos para el header */
+    .header {
+    width: 100%;            /* Ocupa todo el ancho */
+    background-color: #fff; /* Fondo blanco */
+    position: fixed;        /* Fijo en la parte superior */
+    top: 0;                 /* Pegado arriba */
+    left: 0;                /* Pegado a la izquierda */
+    padding: 10px 0;        /* Espaciado vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+    }
+
+    /* Contenedor del header */
+    .header-container {
+    display: flex;
+    justify-content: space-between; /* Separa el logo y los enlaces */
+    align-items: center;
+    width: 90%;      /* Ancho del contenido */
+    margin: 0 auto;  /* Centrar en la pantalla */
+    }
+
+    /* Logo */
+    .header-logo {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+    }
+
+    /* Menú de navegación */
+    .nav-menu {
+    display: flex;
+    gap: 60px; /* Espacio entre los enlaces */
+    }
+
+    /* Estilos de los enlaces */
+    .nav-link {
+    text-decoration: none;
+    color: #213555; /* Color del texto */
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Halant', serif;
+    transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+    color: #3E5879; /* Cambia de color al pasar el mouse */
+    }
+
+
+</style>

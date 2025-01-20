@@ -5,54 +5,21 @@ router.get('/', (req, res) => {
     res.render('landing_page');
 });
 
-router.get('/panelDeJuegos', (req, res) => {
-    res.render('panel_de_juegos')
+// Rutas Secundarias
+router.get('/home', (req, res) => {
+    res.render('home');
 });
 
-router.get('/settingTotis', (req, res) => {
-    res.render('setting_totis')
+router.get('/photos', (req, res) => {
+    res.render('photos');
 });
 
-// Ruta Juego Cuéntame Algo
-
-router.get('/settingCA', (req, res) => {
-    res.render('setting_ca')
+router.get('/information', (req, res) => {
+    res.render('information');
 });
 
-router.get('/felicidadesCA', (req, res) => {
-    res.render('felicidades_ca')
+router.get('/projects', (req, res) => {
+    res.render('projects');
 });
 
-router.get('/felicidades', (req, res) => {
-    res.render('felicidades')
-});
-
-router.get('/errorCA', (req, res) => {
-    res.render('error_ca')
-});
-
-router.get('/perdiste', (req, res) => {
-    res.render('perdiste')
-});
-
-
-router.get('/cuentameAlgo', (req, res) => {
-    res.render('cuentame_algo')
-});
-
-router.get('/terminado_ca', (req, res) => {
-    res.render('terminado_ca')
-});
-
-router.get('/coolorcitos', (req, res) => {
-    res.render('coolorcitos')
-});
-
-router.get('/felicidadesC', (req, res) => {
-    res.render('felicidadesC')
-});
-
-
-
-
-module.exports = router
+module.exports = router;
