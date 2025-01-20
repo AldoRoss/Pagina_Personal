@@ -1,40 +1,31 @@
-<%- include('./partials/_header') %>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Personal</title>
-  <link rel="stylesheet" href="/css/landing_page.css"> <!-- Asegúrate de tener este archivo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="icon" href="/images/Logo-Compress.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/landing_page.css"> <!-- Ruta correcta a tu CSS -->
 </head>
+
 <body>
-  <div class="landing-container">
-    <!-- Imagen de fondo -->
-    <div class="background-image"></div>
 
     <!-- Contenedor principal -->
-    <div class="content-container">
-      <!-- Imagen en forma de círculo -->
-      <div class="profile-image">
-        <img src="/images/Aldo.jpg" alt="Mi Foto">
-      </div>
+    <div class="container">
+        <!-- Texto a la izquierda -->
+        <div class="text-section">
+            <h1>Bienvenido</h1>
+            <p>Soy Aldo Rosales Benhumea, ingeniero en inteligencia artificial. En esta página encontrarás información sobre mí, mis intereses, proyectos y experiencia profesional. Espero que este espacio te ayude a conocer más sobre mi trabajo y pasión por la IA. </p>
+            <a  href="/home"><button class="start-btn">Explorar</button></a>
+        </div>
 
-      <!-- Título y descripción -->
-      <h1 class="landing-title">¡Bienvenido a mi página personal!</h1>
-      <p class="landing-description">
-        Aquí encontrarás información sobre mí, mis proyectos y mis intereses. ¡Explora y conoce más!
-      </p>
-
-      <!-- Botón de iniciar -->
-      <button class="start-button" onclick="window.location.href='/inicio'">Iniciar</button>
+        <!-- Imagen circular a la derecha -->
+        <div class="image-section">
+            <img src="/images/Aldo.jpg" alt="Mi Foto" class="profile-image">
+        </div>
     </div>
-  </div>
-
-  <script src="/js/landing_page.js"></script> <!-- Archivo de JavaScript si es necesario -->
-</body>
-</html>
 
 
-
-<%- include('./partials/_footer') %>
+<%- include('./partials/_modern_footer') %>

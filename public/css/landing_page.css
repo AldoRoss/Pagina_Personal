@@ -1,82 +1,93 @@
-/* Estilo global */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-  }
-  
-  /* Contenedor principal */
-  .landing-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  /* Imagen de fondo */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/images/Fondo.jpg') no-repeat center center/cover;
-    z-index: -1;
-  }
-  
-  /* Contenedor de contenido */
-  .content-container {
-    text-align: center;
-    color: #000000;
-    padding: 20px;
-  }
-  
-  /* Imagen de perfil */
-  .profile-image {
-    margin: 20px auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #fff;
-  }
-  
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Título */
-  .landing-title {
-    font-size: 2em;
-    margin: 10px 0;
-  }
-  
-  /* Descripción */
-  .landing-description {
-    font-size: 1.2em;
-    margin: 10px 0 20px;
-  }
-  
-  /* Botón de iniciar */
-  .start-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .start-button:hover {
-    background-color: #0056b3;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+
+/* Fondo de la página */
+body {
+  background-image: url('/images/Fondo.jpg'); /* Asegura que la imagen esté en public/images/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+  height: 60%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  background: rgba(30, 30, 30, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Sección de texto */
+.text-section {
+  align-items: center;
+  width: 50%;
+  text-align: left;
+  padding-left: 10%;
+}
+
+h1 {
+  margin-top: 5%;
+  color: #F5EFE7;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'Halant', serif;
+}
+
+p {
+  margin-top: -10%;
+  color: #F5EFE7;
+  text-align: justify;
+  font-size: 110%;
+  font-family: 'Halant', serif;
+}
+
+/* Botón de iniciar */
+.start-btn {
+  margin-top: 5%;;
+  margin-left: 50%;
+  padding-bottom: 10%;
+  background-color: #F5EFE7;
+  color: #3E5879;
+  border: none;
+  font-family: 'Halant', serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #213555;
+  color: #F5EFE7;
+}
+
+/* Sección de imagen */
+.image-section {
+  margin-top: 0%;
+  padding-right: 10%;
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Imagen circular */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-image:hover  {
+  transform: scale(1.03); /* Efecto de zoom */
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
+}

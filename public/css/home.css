@@ -1,171 +1,91 @@
-/* Fondo y estilo general */
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+
+/* Fondo de la página */
 body {
-    background-color: #8FB9E4; 
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Título del juego */
-.game-title {
-    font-size: 50px;
-    font-weight: bold;
-    color: #1d3557; 
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Zonas de destino */
-.slot-container {
+    background-color: #F5EFE7;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-/* .slot {
-    width: 250px; 
-    height: 250px;
-    background-color: white; 
-    border: 6px solid #ccc; 
-    border-radius: 25px;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: black;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.2s, border-color 0.2s;
-} */
-
-/* .slot {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 10px; 
-    position: relative;
-    width: 250px;
-    height: 250px;
-    background-color: white;
-    border: 6px solid #ccc;
-    border-radius: 25px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, border-color 0.2s;
-} */
-
-
-.draggable {
-    width: 60px;
-    height: 60px;
-    cursor: grab;
-}
-
-/* Estilo para el contenedor de los slots */
-/* Contenedor de zonas de colores */
-.slots {
-    display: flex;
-    flex-wrap: wrap; /* Permitir múltiples filas */
-    justify-content: center; /* Centrar los elementos */
-    gap: 20px; /* Espaciado entre los slots */
-    margin: 20px auto; /* Espaciado externo */
-    max-width: 1000px; /* Limitar el ancho del contenedor */
-}
-
-/* Ajustar el tamaño de los slots */
-.slot {
-    width: 200px; /* Ancho de cada slot */
-    height: 200px; /* Alto de cada slot */
-    background-color: white;
-    border: 6px solid #ccc;
-    border-radius: 25px;
-    display: flex; /* Alinear los elementos dentro del slot */
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, border-color 0.2s;
 }
 
-
-
-  /* Imágenes dentro del slot */
-.slot img {
-    width: 100px; /* Ajusta el tamaño de las imágenes */
-    height: auto;
-    position: absolute; /* Para evitar que alteren el flujo */
-}
-
-
-
-.slot[data-color="blue"] {
-    border-color: #007BFF;
-}
-
-.slot[data-color="yellow"] {
-    border-color: #FFC107; 
-}
-
-.slot[data-color="red"] {
-    border-color: #DC3545; 
-}
-
-.slot[data-color="green"] {
-    border-color: #28A745; 
-}
-
-.slot:hover {
-    transform: scale(1.05); 
-    border-width: 4px; 
-}
-
-
-.draggable-container {
+/* Contenedor principal */
+.container {
+    margin-top: 5%;
+    width: 82%;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-    max-width: 700px;
-}
-
-/* Imágenes arrastrables */
-.draggable {
-    width: 120px; 
-    height: 120px;
-    background-color: white; 
-    border: 2px solid #ccc; 
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: center;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    object-fit: contain; 
-    cursor: grab;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-    padding: 10px; 
-    transition: transform 0.2s ease;
 }
 
-.draggable:active {
-    transform: scale(1.1); /* Agranda la imagen al arrastrarla */
+/* Sección superior: título e imagen */
+.top-section {
+    display: flex;
+    justify-content: space-between; /* Espacia el título y la imagen */
+    align-items: center;
+    width: 100%;
 }
 
-
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: auto;
-    cursor: pointer;
+/* Sección de texto */
+.text-section {
+    width: 90%;
+    text-align: justify;
+    margin-top: 20px; /* Espaciado entre la imagen/título y el texto */
 }
 
+/* Estilo del título */
+.text-title {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-left: 5%;
+}
 
-@media (max-width: 768px) {
-    .slot {
-        width: 120px;
-        height: 120px;
-    }
+h1 {
+    margin-top: 2%;
+    color: #213555;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Halant', serif;
+    text-align: left;
+}
+  
+h2 {
+    margin-top: 3%;
+    color: #F95454;
+    line-height: 2;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
+}
 
-    .draggable {
-        width: 90px;
-        height: 90px;
-    }
+p {
+    color: #213555;
+    text-align: justify;
+    font-size: 17px;
+}
+  
+
+/* Sección de imagen */
+.image-section {
+    margin-right: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+/* Imagen circular */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-image:hover {
+    transform: scale(1.03); /* Efecto de zoom */
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
 }
