@@ -1,97 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+
+/* Fondo de la página */
 body {
-    background-color: #2A4674;
-    font-family: Arial, sans-serif;
+    background-color: #F5EFE7;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
-    margin: 0;
 }
 
-/* Contenedor principal del juego */
-.game-container {
+/* Contenedor principal */
+.container {
+    margin-top: 2%;
+    width: 82%;
+    max-width: 1200px;
+    height: 73%;
+    max-height: 700px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* Permitir scroll cuando el contenido exceda el tamaño */
+    max-height: 80vh; /* Ajusta según necesidad */
+    overflow-y: auto; 
+    
+    /* Mantener estructura en columna */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    text-align: center;
 }
 
-/* Botón de regresar en la parte superior izquierda */
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: auto;
-    cursor: pointer;
+
+/* Sección superior: título e imagen */
+.top-section {
+    display: flex;
+    justify-content: space-between; /* Espacia el título y la imagen */
+    align-items: center;
+    width: 100%;
 }
 
-/* Título de la pantalla */
+/* Sección de texto */
+.text-section {
+    width: 90%;
+    text-align: justify;
+    margin-top: 20px; /* Espaciado entre la imagen/título y el texto */
+}
+
+/* Estilo del título */
+.text-title {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-left: 5%;
+}
+
 h1 {
-    font-size: 5rem;
-    color: #FFC544;
-    font-weight: bold; /* Negritas */
-    margin: 750px 0 0 0; /* Solo margen superior de 10px */
-    text-align: center; /* Opcional: centrar el texto horizontalmente */
+    margin-top: 2%;
+    color: #213555;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Halant', serif;
+    text-align: left;
 }
-
 
 h2 {
-    font-size: 4rem;
-    color: #fff;
-    font-weight: bold; /* Negritas */
+    margin-top: 3%;
+    color: #3E5879;
+    line-height: 2;
+    font-size: 30px;
+    font-family: 'Halant', serif;
+    font-weight: bold;
+    text-align: left;
 }
-
+  
 h3 {
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: bold; /* Negritas */
+    margin-top: 3%;
+    color: #F95454;
+    line-height: 2;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
 }
 
-/* Imagen Seleccionada al azar */
-.img {
-    position: relative;
-    width: 20%;
-    height: auto;
-    cursor: pointer;
+p {
+    color: #213555;
+    text-align: justify;
+    font-size: 17px;
 }
 
-
-/* Botón grande de inicio */
-.start-button {
-    background-color: #ffb72c;
-    font-weight: bold; /* Negritas */
-    margin: 80px;
-    color: white;
-    font-size: 4rem;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+ul li {
+    color: #213555;  
+    margin-left: 20px;
 }
+  
 
-.start-button:hover {
-    background-color: #d39926;
-}
-
-.start-button.clicked {
-    background-color: #F8A4A4; /* Cambiar color cuando se presiona */
-    color: white; /* Cambiar el color del texto si se desea */
-}
-
-.button-container {
+/* Sección de imagen */
+.image-section {
+    margin-right: 5%;
+    width: 30%;
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    gap: 10px; /* Espaciado entre el botón y la imagen */
-    margin-top: 20px; /* Espaciado superior para separar del contenido previo */
+    justify-content: flex-end;
+    padding-right: 5%;
 }
 
-.img-right {
-    padding-left: 10;
-    width: 15%; /* Tamaño de la imagen */
-    height: auto; /* Tamaño de la imagen */
+/* Imagen circular */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
+
+.profile-image:hover {
+    transform: scale(1.03); /* Efecto de zoom */
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
+}
+
+
+/* Sección superior: imagen y título */
+.top-section-r {
+    display: flex;
+    justify-content: space-between; /* Imagen a la izquierda, título a la derecha */
+    align-items: center;
+    width: 100%;
+}
+
+/* Sección de imagen */
+.image-section-r {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start; /* Imagen a la izquierda */
+    padding-left: 5%;
+}
+
+/* Imagen circular */
+.profile-image-r {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-image-r:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Sección del título */
+.text-title-r {
+    width: 70%;
+    text-align: left; /* Asegura que el título esté alineado a la izquierda */
+    padding-right: 5%;
+}
+
+/*Nuevo molde*/
+
+
+/* Imagen */
+.new-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+

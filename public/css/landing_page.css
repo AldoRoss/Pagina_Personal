@@ -2,7 +2,7 @@
 
 /* Fondo de la página */
 body {
-  background-image: url('/images/Fondo.jpg'); /* Asegura que la imagen esté en public/images/ */
+  background-image: url('/images/Fondo1.png'); /* Asegura que la imagen esté en public/images/ */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
