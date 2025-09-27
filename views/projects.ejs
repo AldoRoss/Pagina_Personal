@@ -1,4 +1,151 @@
 <%- include('./partials/_header') %>
-<h1>projects</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="icon" href="/images/Logo-Compress.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/projects.css"> <!-- Ruta correcta a tu CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Practicas y Proyectos</h1>
+
+        <div class="text-section">
+            <h2>Desarrollo de proyectos</h2>
+            <h3>Que gusto tenerte por aquí</h3>
+            <p>
+                En esta sección encontrarás una recopilación de prácticas y proyectos en los que he trabajado, tanto en el ámbito académico como en el profesional. Cada uno de ellos refleja mi experiencia en distintas áreas de la inteligencia artificial, desarrollo de software y bases de datos, así como la aplicación de metodologías de trabajo para la resolución de problemas complejos.
+                Aquí podrás explorar desde proyectos de aprendizaje automático, visión artificial y procesamiento de lenguaje natural, hasta implementaciones en desarrollo web, optimización de algoritmos y bases de datos. Cada proyecto cuenta con una descripción detallada de los objetivos, herramientas utilizadas y los resultados obtenidos.
+                ¡Espero que esta sección te brinde una visión más clara sobre mi trabajo y experiencia! 
+            </p>    
+        </div>
+
+        <div class="text-section">
+            <h2>Teoría de la Computación</h2>
+            <p>
+                <strong>Fundamentos Teóricos de la Inteligencia Artificial</strong>
+                Esta materia me permitió desarrollar una comprensión profunda de los fundamentos matemáticos y teóricos que sustentan la inteligencia artificial moderna. A través de una serie de proyectos progresivos, cada uno refleja mi capacidad para implementar algoritmos complejos, optimizar código y resolver problemas computacionales fundamentales.
+            </p>
+
+            <h3>Generador de Universos</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Optimización algorítmica, recursividad, análisis de complejidad<br>
+                En la primera práctica se va a desarrollar un programa el cual solicite un número entero entre el 1 y el 10000, el programa debe crear un documento TXT y en ese mismo el programa debe crear todas las posibles combinaciones de cadenas binarias de tamaño cero hasta el número ingresado por el usuario, en caso de no ser ingresado un número el programa lo debe escoger un número de manera aleatoria.
+            </p>
+            <p>
+                Para desarrollar esta práctica utilicé dos métodos diferentes:<br>
+                <strong>La Primera Versión:</strong> Para el desarrollo de esta práctica decidí utilizar un contador que va desde el uno hasta el número total de posibles combinaciones que se pueda hacer con la cantidad de bits que pide el usuario, multiplicando 2 elevado a la potencia que ingrese al usuario, el contador va a estar iterando de unidad en una unidad y lo que va a hacer es convertir ese número a cadena binaria para poder abarcar las cadenas sin que se repitan, y en las cadenas que se generan invertirlas para que de esta manera se generen todas las posibles cadenas que se guardaran un archivo txt.
+            </p>
+            <p>
+                <strong>La Segunda Versión:</strong> Al observar esta situación y compararlo con otros programas de mis compañeros, observé que mi programa consumía muchos recursos y mucho tiempo en ejecutarse, por lo que lo cambié varias cosas, tanto al generar el universo como al graficar los datos, opté por generar una Función que cubriera la una parte del problema, generar todos las posibles cadenas binarias de tamaño n, utilizando recursividad, para después ir sumando todas las cadenas de tamaño 1 hasta la n.
+            </p>
+            <p>
+                Este proyecto demuestra mi capacidad de análisis y optimización algorítmica, mejorando significativamente la eficiencia del código inicial.
+            </p>
+            <a href="https://drive.google.com/file/d/1gV_DceQJKmsg6bfH333M5IcY5yFF_NUk/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Generador de Universos" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Generador de Números Primos</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Algoritmos matemáticos, visualización de datos, documentación técnica<br>
+                En este proyecto se desarrolló un programa que genera un lenguaje binario a partir de números primos. El programa determina los números primos dentro de un rango específico, definido por un valor "n" que puede ser introducido por el usuario o calculado automáticamente. Los resultados se guardan en dos archivos de texto: uno en formato decimal y otro en binario. Además, a partir de estos datos, el programa crea gráficas que muestran la cantidad de unos presentes en cada cadena binaria, permitiendo una visualización clara de la distribución. Como parte del informe, se documentan los resultados para el caso donde n=2003, incluyendo las gráficas de los datos originales y de su logaritmo en base 10, y se adjunta el código de implementación en formato LaTeX.
+            </p>
+            <p>
+                Este proyecto refleja mi habilidad para combinar matemáticas computacionales con análisis visual de datos y documentación técnica rigurosa.
+            </p>
+            <a href="https://drive.google.com/file/d/1qgVDJ1ypNyd2VYqoaEx08Rjzu03nIj6I/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Generador de Números Primos" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Autómata Finito Determinista para Detección de Paridad</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Teoría de autómatas, simulación de sistemas, validación automática<br>
+                En esta práctica, se desarrolló un programa para simular un protocolo utilizando un Autómata Finito Determinista (AFD). El programa funciona de manera automática y está diseñado para generar 10⁶ cadenas binarias aleatorias de 64 bits, las cuales se almacenan en un archivo de texto. Tras una breve pausa de 2 segundos, el programa valida cada una de estas cadenas usando un AFD de paridad. Las cadenas son clasificadas como aceptadas o rechazadas y se guardan en dos archivos de texto separados, acumulando los resultados de todas las ejecuciones. Además, se ofrece la posibilidad de generar una gráfica que representa el AFD completo, combinando el protocolo y el AFD de paridad en un solo grafo. El informe de la práctica incluye un ejemplo de verificación y el código de implementación completo.
+            </p>
+            <p>
+                Esta implementación demuestra mi dominio de la teoría de autómatas y mi capacidad para crear sistemas de validación automatizados de gran escala.
+            </p>
+            <a href="https://drive.google.com/file/d/1tijqYjNtdMa0V-YxNn_2TYRGDqKsnBC8/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Autómata Finito Determinista" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Tablero</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Algoritmos de juegos, simulación, análisis de rutas, visualización<br>
+                La práctica se centró en la creación de un programa que simula el movimiento de una o dos piezas de ajedrez en un tablero de 4×4. Este programa ofrece dos modos de operación: automático o manual, permitiendo al usuario ingresar una secuencia de movimientos o generar una de forma aleatoria. Cuando se usan dos piezas, la segunda siempre inicia en la posición 4 con el objetivo de llegar a la posición 13, y la elección de la pieza que comienza a moverse es aleatoria. El programa registra y guarda en archivos de texto todos los movimientos posibles y las rutas ganadoras para cada pieza. Además, cuenta con una función de visualización que gráfica el tablero y los movimientos, y también puede mostrar una representación de toda la red de movimientos generada. La cantidad de movimientos permitidos por el programa está limitada a un rango de entre 4 y 50. En esencia, el programa no solo simula la dinámica del ajedrez, sino que también ofrece herramientas para analizar y visualizar las posibles rutas y resultados.
+            </p>
+            <p>
+                Este proyecto refleja mi capacidad para desarrollar simulaciones complejas con múltiples modos de operación y herramientas de análisis visual.
+            </p>
+            <a href="https://drive.google.com/file/d/1t0ZCHtDx5GpUZthPwqZJ8QvfpbeFXRJ_/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Tablero" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Pila para Detectar Cadenas con 0ⁿ1ⁿ</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Estructuras de datos avanzadas, animaciones interactivas, teoría de lenguajes formales<br>
+                En esta práctica se implementó un programa que simula un autómata de pila, una extensión de los autómatas finitos que se utiliza para reconocer lenguajes más complejos. El objetivo específico fue reconocer el lenguaje libre de contexto 0ⁿ1ⁿ, que consiste en cadenas binarias con un número idéntico de ceros y unos.
+            </p>
+            <p>
+                El programa opera en dos modos:<br>
+                <strong>Modo manual:</strong> El usuario puede ingresar una cadena para que el autómata la valide.<br>
+                <strong>Modo automático:</strong> El programa genera una cadena aleatoria de entre 2 y 100,000 elementos para ser analizada.<br>
+                Una característica clave del programa es que, para cadenas de 10 elementos o menos, se incluye una animación que visualiza el estado de la pila, ayudando a entender cómo el autómata realiza el seguimiento de los ceros y unos para determinar si la cadena es válida. Esta herramienta demuestra cómo el autómata de pila, a diferencia de un autómata finito, puede manejar la dependencia entre el número de ceros y unos.
+            </p>
+            <p>
+                Este proyecto demuestra mi capacidad para implementar estructuras de datos complejas y crear herramientas educativas interactivas.
+            </p>
+            <a href="https://drive.google.com/file/d/1Qd5UZ0wZe0-6xxABy2hnOA3MKI0nZxyX/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Pila para Detectar Cadenas con 0ⁿ1ⁿ" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Palíndromo</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Gramáticas formales, generación automática, procesamiento de lenguaje<br>
+                En esta práctica, se desarrolló un programa que genera palíndromos de lenguaje binario utilizando conceptos de Gramáticas Libres de Contexto (GLC). El programa ofrece un modo manual donde el usuario puede especificar la longitud del palíndromo, o un modo automático que lo genera aleatoriamente con una longitud de hasta 10,000 elementos. La aplicación almacena en un archivo de texto la secuencia de reglas de producción utilizadas para construir cada palíndromo, documentando el proceso paso a paso y demostrando cómo las reglas de reescritura de una gramática formal permiten la creación de cadenas complejas a partir de símbolos más simples.
+            </p>
+            <p>
+                Este proyecto refleja mi comprensión de los fundamentos teóricos del procesamiento de lenguaje natural y la generación automática de texto.
+            </p>
+            <a href="https://drive.google.com/file/d/1K5MZBIvFE9PFz9tjxca_5QJa7Qgngccu/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Palíndromo" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Generador de Patrones de Código</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Análisis sintáctico, gramáticas BNF, traducción de código<br>
+                En esta práctica se desarrolló un programa que genera y deriva la gramática Backus-Naur (BNF) para la estructura condicional IF, un formalismo esencial para describir la sintaxis de los lenguajes de programación. El programa permite al usuario especificar la cantidad de IFs anidados a generar o realizar la derivación de forma automática. Con un límite de 1,000 derivaciones para prevenir bucles infinitos, el proceso registra cada paso en un archivo, ofreciendo una traza completa de las producciones gramaticales. Además, el programa traduce la cadena final derivada en pseudocódigo, demostrando de forma práctica cómo las reglas de una gramática formal pueden ser utilizadas para construir estructuras de código válidas y legibles.
+            </p>
+            <p>
+                Este trabajo establece las bases para mi comprensión de compiladores y herramientas de análisis de código.
+            </p>
+            <a href="https://drive.google.com/file/d/1bMXk6GNM3_D12Q7Klr9y7nmnMYCH0iPU/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Generador de Patrones de Código" class="Archivo_Adjunto">
+            </a>
+
+            <h3>Máquina de Turing</h3>
+            <p>
+                <strong>Habilidades desarrolladas:</strong> Computabilidad, modelos de cómputo universales, visualización de algoritmos<br>
+                En esta práctica, se implementó un programa que simula una Máquina de Turing para reconocer el lenguaje 0ⁿ1ⁿ, es decir, cadenas que tienen el mismo número de ceros seguidos por el mismo número de unos. El programa puede funcionar en modo manual, donde el usuario introduce una cadena para su validación, o en modo automático, que genera una cadena aleatoria de hasta 100,000 elementos. Para cadenas más cortas, de hasta 16 elementos, se incluye una animación que muestra el proceso de la Máquina de Turing en acción, lo que ayuda a comprender visualmente cómo el modelo lee y manipula los símbolos en la cinta para verificar la validez de la cadena. Este ejercicio no solo resuelve un problema específico de reconocimiento de lenguaje, sino que también ilustra los principios teóricos de la computación establecidos por Alan Turing.
+            </p>
+            <p>
+                Este proyecto culminante demuestra mi dominio de los fundamentos más profundos de la teoría de la computación.
+            </p>
+            <a href="https://drive.google.com/file/d/13S_HWwMO8wVI5IQSGX7O-fg-SHQUhV4J/view?usp=drive_link">
+                <img src="/images/archivo.png" alt="Archivo del proyecto Máquina de Turing" class="Archivo_Adjunto">
+            </a>
+
+            <h2>Impacto en mi Formación Profesional</h2>
+            <p>
+                Esta serie de proyectos en Teoría de la Computación me proporcionó una base sólida en los fundamentos que sustentan la inteligencia artificial moderna. Cada implementación refleja mi capacidad para abordar problemas complejos desde una perspectiva teórica rigurosa, desarrollando habilidades esenciales en algoritmos, estructuras de datos, optimización y visualización de conceptos abstractos. Esta comprensión profunda es fundamental para mi trabajo como ingeniero de IA, permitiéndome abordar desafíos tecnológicos con una base teórica sólida.
+            </p>
+        </div>
+
+       
+
+    </div>
+
 
 <%- include('./partials/_footer') %>
