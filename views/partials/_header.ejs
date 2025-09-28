@@ -20,18 +20,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburger-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    });
+</script>
+
 
 <body>
 
 <header class="header">
     <div class="header-container">
-      <img src="/images/Logo-Compress.png" alt="Logo" class="header-logo">
-      <nav class="nav-menu">
-        <a href="/home" class="nav-link">Inicio</a>
-        <a href="/information" class="nav-link">Información</a>
-        <a href="/projects" class="nav-link">Proyectos</a>
-        <a href="/photos" class="nav-link">Fotos</a>
-      </nav>
+        <img src="/images/Logo-Compress.png" alt="Logo" class="header-logo">
+        <button class="hamburger" id="hamburger-menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-menu" id="nav-links">
+            <a href="/home" class="nav-link">Inicio</a>
+            <a href="/information" class="nav-link">Información</a>
+            <a href="/projects" class="nav-link">Proyectos</a>
+            <a href="/photos" class="nav-link">Fotos</a>
+        </nav>
     </div>
 </header>
 
@@ -84,5 +100,60 @@
     transform: translateY(-5px);
     }
 
+    .nav-link.active-link {
+    color: #F95454; /* Salmon color */
+    font-weight: 700; 
+}
+
+    /* Estilos para el botón de hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #213555;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+    }
+    
+    .nav-menu {
+        display: none; /* Oculta el menú de navegación */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Debajo del header */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+    
+    .hamburger {
+        display: block; /* Muestra el botón de hamburguesa */
+    }
+}
 
 </style>
