@@ -1,103 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+
+/* Fondo de la página */
 body {
-    background-color: #F8A4A4;
-    font-family: Arial, sans-serif;
+    background-color: #F5EFE7;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    margin: 0;
 }
 
-/* Contenedor principal del juego */
-.game-container {
+/* Contenedor principal */
+.container {
+    margin-top: 2%;
+    width: 82%;
+    max-width: 1200px;
+    height: 73%;
+    max-height: 700px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* Permitir scroll cuando el contenido exceda el tamaño */
+    max-height: 80vh; /* Ajusta según necesidad */
+    overflow-y: auto; 
+    
+    /* Mantener estructura en columna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Sección superior: título e imagen */
+.top-section {
+    display: flex;
+    justify-content: space-between; /* Espacia el título y la imagen */
+    align-items: center;
+    width: 100%;
+}
+
+/* Sección de texto */
+.text-section {
+    width: 90%;
+    text-align: justify;
+    margin-top: 20px; /* Espaciado entre la imagen/título y el texto */
+}
+
+/* Estilo del título */
+.text-title {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-left: 5%;
+}
+
+h1 {
+    margin-top: 2%;
+    color: #213555;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Halant', serif;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 3%;
+    color: #3E5879;
+    line-height: 2;
+    font-size: 30px;
+    font-family: 'Halant', serif;
+    font-weight: bold;
+    text-align: left;
+}
+  
+h3 {
+    margin-top: 3%;
+    color: #F95454;
+    line-height: 2;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
+}
+
+p {
+    color: #213555;
+    text-align: justify;
+    font-size: 17px;
+}
+
+ul li {
+    color: #213555;  
+    margin-left: 20px;
+}
+  
+
+/* Sección de imagen */
+.image-section {
+    margin-right: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+/* Imagen circular */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-image:hover {
+    transform: scale(1.03); /* Efecto de zoom */
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
+}
+
+
+/* Sección superior: imagen y título */
+.top-section-r {
+    display: flex;
+    justify-content: space-between; /* Imagen a la izquierda, título a la derecha */
+    align-items: center;
+    width: 100%;
+}
+
+/* Sección de imagen */
+.image-section-r {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start; /* Imagen a la izquierda */
+    padding-left: 5%;
+}
+
+/* Imagen circular */
+.profile-image-r {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-image-r:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Sección del título */
+.text-title-r {
+    width: 70%;
+    text-align: left; /* Asegura que el título esté alineado a la izquierda */
+    padding-right: 5%;
+}
+
+/*Nuevo molde*/
+
+/* Imagen circular */
+.Archivo_Adjunto {
+  width: 50px;
+  height: 50px;
+  display: block; /* Asegura que se comporta como un bloque */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Archivo_Adjunto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 240px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     text-align: center;
 }
 
-/* Botón de regresar en la parte superior izquierda */
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: auto;
-    cursor: pointer;
+.card:hover .card__content {
+    transform: rotateX(0deg);
 }
 
-/* Título de la pantalla */
-h1 {
-    font-size: 6rem;
+.card__title {
+    margin: 0 0 15px 0;
+    font-family: 'Halant', serif;
+    font-size: 1.4em;
+    font-weight: 600;
     color: #ffffff;
-    font-weight: bold; /* Negritas */
-    margin-top: 100px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-h2 {
-    font-size: 3rem;
-    color: #fff;
-    font-weight: bold; /* Negritas */
+.card__description {
+    margin: 0;
+    font-family: 'Halant', serif;
+    font-size: 0.95em;
+    font-weight: 300;
+    color: #e0e0e0;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-h3 {
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: bold; /* Negritas */
+.gallery-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Halant', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Imagen Seleccionada al azar */
-.img {
-    position: relative;
-    width: 50%;
-    height: auto;
-    cursor: pointer;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .card {
+        width: 280px;
+        height: 210px;
+    }
 }
 
-/* Contenedor de los botones */
-.button-container {
-    display: flex; /* Flexbox para alinear en fila */
-    justify-content: center; /* Centrar horizontalmente */
-    gap: 10px; /* Espaciado entre botones */
-    margin-top: 20px; /* Espaciado superior */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
+    }
+    
+    .card {
+        width: 300px;
+        height: 220px;
+    }
+    
+    .gallery-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
 }
 
-
-/* Botón grande de inicio */
-.again-button {
-    background-color: #49B37C;
-    font-weight: bold; /* Negritas */
-    margin: 80px;
-    color: white;
-    font-size: 4rem;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@media (max-width: 480px) {
+    .card {
+        width: 280px;
+        height: 200px;
+    }
+    
+    .card__content {
+        padding: 20px;
+    }
+    
+    .card__title {
+        font-size: 1.2em;
+    }
+    
+    .card__description {
+        font-size: 0.85em;
+    }
 }
-
-.again-button:hover {
-    background-color: #3a8c62;
-}
-
-/* Botón grande de inicio */
-.start-button {
-    background-color: #ffb72c;
-    font-weight: bold; /* Negritas */
-    margin: 80px;
-    color: white;
-    font-size: 4rem;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.start-button:hover {
-    background-color: #d39926;
-}
-
