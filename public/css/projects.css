@@ -187,16 +187,3 @@ ul li {
     text-align: center;
 }
 
-.video {
-    max-width: 30%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.video-h {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}

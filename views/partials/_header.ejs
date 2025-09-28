@@ -21,13 +21,30 @@
 </head>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
+        // Lógica para el menú de hamburguesa
         const hamburgerBtn = document.getElementById('hamburger-menu-btn');
         const navLinks = document.getElementById('nav-links');
 
         hamburgerBtn.addEventListener('click', function() {
             navLinks.classList.toggle('active');
         });
+
+        // Lógica para resaltar el enlace activo
+        const currentPath = window.location.pathname;
+        const links = navLinks.getElementsByTagName('a');
+
+        for (let i = 0; i < links.length; i++) {
+            const link = links[i];
+            // Normalize path to handle homepage and trailing slashes
+            const linkPath = link.getAttribute('href') === '/home' ? '/' : link.getAttribute('href');
+            const normalizedCurrentPath = currentPath === '/home' ? '/' : currentPath;
+
+            if (linkPath === normalizedCurrentPath) {
+                link.classList.add('active-link');
+                break; // Stop after finding the match
+            }
+        }
     });
 </script>
 
