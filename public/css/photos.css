@@ -200,7 +200,7 @@ ul li {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px rgba(33,53,85, 0.3);
 }
 
 .card__content {
@@ -211,7 +211,7 @@ ul li {
     height: 100%;
     padding: 25px;
     box-sizing: border-box;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    background: linear-gradient(135deg, rgba(33,53,85,0.8), rgba(33,53,85,0.9));
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
