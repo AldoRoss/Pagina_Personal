@@ -20,35 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // Lógica para el menú de hamburguesa
-        const hamburgerBtn = document.getElementById('hamburger-menu-btn');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburgerBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-
-        // Lógica para resaltar el enlace activo
-        const currentPath = window.location.pathname;
-        const links = navLinks.getElementsByTagName('a');
-
-        for (let i = 0; i < links.length; i++) {
-            const link = links[i];
-            // Normalize path to handle homepage and trailing slashes
-            const linkPath = link.getAttribute('href') === '/home' ? '/' : link.getAttribute('href');
-            const normalizedCurrentPath = currentPath === '/home' ? '/' : currentPath;
-
-            if (linkPath === normalizedCurrentPath) {
-                link.classList.add('active-link');
-                break; // Stop after finding the match
-            }
-        }
-    });
-</script>
-
-
 <body>
 
 <header class="header">
@@ -72,13 +43,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
     /* Estilos para el header */
     .header {
-    width: 100%;            /* Ocupa todo el ancho */
-    background-color: #fff; /* Fondo blanco */
-    position: fixed;        /* Fijo en la parte superior */
-    top: 0;                 /* Pegado arriba */
-    left: 0;                /* Pegado a la izquierda */
-    padding: 10px 0;        /* Espaciado vertical */
-    box-shadow: 0 2px 5px rgba(249, 84, 84, 0.1); /* Sombra inferior */
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 12px rgba(33, 53, 85, 0.1);
     z-index: 1000;
     }
 
@@ -100,7 +71,8 @@
     /* Menú de navegación */
     .nav-menu {
     display: flex;
-    gap: 60px; /* Espacio entre los enlaces */
+    gap: 40px;
+    align-items: center;
     }
 
     /* Estilos de los enlaces */
@@ -146,33 +118,80 @@
     .header-container {
         justify-content: space-between;
     }
-    
+
     .nav-menu {
-        display: none; /* Oculta el menú de navegación */
+        display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px; /* Debajo del header */
+        top: 64px;
         left: 0;
         background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(33, 53, 85, 0.1);
         text-align: center;
-        padding: 20px 0;
+        padding: 16px 0;
         z-index: 999;
+        gap: 0;
     }
 
     .nav-menu.active {
-        display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+        display: flex;
     }
 
     .nav-link {
-        padding: 10px 0;
-        font-size: 20px;
+        padding: 12px 0;
+        font-size: 22px;
+        border-bottom: 1px solid #F5EFE7;
     }
-    
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
     .hamburger {
-        display: block; /* Muestra el botón de hamburguesa */
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-logo {
+        width: 60px;
+    }
+
+    .nav-link {
+        font-size: 20px;
     }
 }
 
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburger-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace (móvil)
+        const links = navLinks.getElementsByTagName('a');
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function () {
+                navLinks.classList.remove('active');
+            });
+        }
+
+        // Resaltar enlace activo
+        const currentPath = window.location.pathname;
+        for (let i = 0; i < links.length; i++) {
+            const link = links[i];
+            const linkPath = link.getAttribute('href') === '/home' ? '/' : link.getAttribute('href');
+            const normalizedCurrentPath = currentPath === '/home' ? '/' : currentPath;
+            if (linkPath === normalizedCurrentPath) {
+                link.classList.add('active-link');
+                break;
+            }
+        }
+    });
+</script>

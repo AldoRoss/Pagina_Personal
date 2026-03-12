@@ -1,61 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
 
-/* Fondo de la página */
 body {
     background-color: #F5EFE7;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 90px;
+    padding-bottom: 90px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-/* Contenedor principal */
 .container {
-    margin-top: 2%;
+    margin: 20px auto;
     width: 82%;
-    max-width: 1200px;
-    height: 73%;
-    max-height: 700px;
+    max-width: 1100px;
     background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    
-    /* Permitir scroll cuando el contenido exceda el tamaño */
-    max-height: 80vh; /* Ajusta según necesidad */
-    overflow-y: auto; 
-    
-    /* Mantener estructura en columna */
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(33, 53, 85, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-/* Sección superior: título e imagen */
 .top-section {
     display: flex;
-    justify-content: space-between; /* Espacia el título y la imagen */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-/* Sección de texto */
 .text-section {
     width: 90%;
     text-align: justify;
-    margin-top: 20px; /* Espaciado entre la imagen/título y el texto */
+    margin-top: 24px;
 }
 
-/* Estilo del título */
 .text-title {
-    flex: 1; /* Ocupa el espacio disponible */
+    flex: 1;
     padding-left: 5%;
 }
 
 h1 {
     margin-top: 2%;
     color: #213555;
-    font-size: 45px;
+    font-size: 42px;
     font-weight: bold;
     font-family: 'Halant', serif;
     text-align: left;
@@ -64,19 +53,23 @@ h1 {
 h2 {
     margin-top: 3%;
     color: #3E5879;
-    line-height: 2;
-    font-size: 30px;
+    line-height: 1.5;
+    font-size: 26px;
     font-family: 'Halant', serif;
     font-weight: bold;
     text-align: left;
+    border-left: 4px solid #F95454;
+    padding-left: 12px;
+    margin-bottom: 8px;
 }
-  
+
 h3 {
-    margin-top: 3%;
+    margin-top: 20px;
     color: #F95454;
-    line-height: 2;
-    font-size: 19px;
+    line-height: 1.8;
+    font-size: 20px;
     font-weight: bold;
+    font-family: 'Halant', serif;
     text-align: left;
 }
 
@@ -84,15 +77,20 @@ p {
     color: #213555;
     text-align: justify;
     font-size: 17px;
+    line-height: 1.8;
+    font-family: 'Halant', serif;
 }
 
-ul li {
-    color: #213555;  
+ul li, ol li {
+    color: #213555;
     margin-left: 20px;
+    margin-bottom: 6px;
+    line-height: 1.7;
+    font-size: 17px;
+    font-family: 'Halant', serif;
 }
-  
 
-/* Sección de imagen */
+/* Imagen circular */
 .image-section {
     margin-right: 5%;
     width: 30%;
@@ -101,60 +99,57 @@ ul li {
     padding-right: 5%;
 }
 
-/* Imagen circular */
 .profile-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    border: 4px solid #F5EFE7;
+    box-shadow: 0 4px 16px rgba(33, 53, 85, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
-    transform: scale(1.03); /* Efecto de zoom */
-    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(33, 53, 85, 0.25);
 }
 
-
-/* Sección superior: imagen y título */
+/* Versión imagen izquierda */
 .top-section-r {
     display: flex;
-    justify-content: space-between; /* Imagen a la izquierda, título a la derecha */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-/* Sección de imagen */
 .image-section-r {
     width: 30%;
     display: flex;
-    justify-content: flex-start; /* Imagen a la izquierda */
+    justify-content: flex-start;
     padding-left: 5%;
 }
 
-/* Imagen circular */
 .profile-image-r {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    border: 4px solid #F5EFE7;
+    box-shadow: 0 4px 16px rgba(33, 53, 85, 0.15);
+    transition: transform 0.3s ease;
 }
 
 .profile-image-r:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(33, 53, 85, 0.25);
 }
 
-/* Sección del título */
 .text-title-r {
     width: 70%;
-    text-align: left; /* Asegura que el título esté alineado a la izquierda */
+    text-align: left;
     padding-right: 5%;
 }
 
-/*Nuevo molde*/
-
-
-/* Imagen */
 .new-image {
     width: 100%;
     max-width: 300px;
@@ -162,6 +157,175 @@ ul li {
     object-fit: cover;
 }
 
+/* Tarjeta de perfil profesional */
+.profile-summary-card {
+    width: 90%;
+    background: linear-gradient(135deg, #213555 0%, #3E5879 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    color: #F5EFE7;
+}
 
+.profile-summary-card p {
+    color: #F5EFE7;
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 12px;
+}
 
+/* Tarjeta de experiencia laboral */
+.experience-card {
+    width: 90%;
+    background: #F5EFE7;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-top: 16px;
+    border-left: 5px solid #213555;
+}
 
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.experience-company {
+    font-size: 22px;
+    font-weight: bold;
+    color: #213555;
+    font-family: 'Halant', serif;
+}
+
+.experience-role {
+    font-size: 17px;
+    color: #3E5879;
+    font-weight: 600;
+    font-family: 'Halant', serif;
+    margin-bottom: 14px;
+}
+
+.experience-date {
+    font-size: 15px;
+    color: #F95454;
+    font-weight: 700;
+    font-family: 'Halant', serif;
+    white-space: nowrap;
+}
+
+.experience-card ul li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+/* Divisor de sección */
+.section-divider {
+    width: 90%;
+    border: none;
+    border-top: 2px solid #F5EFE7;
+    margin: 28px 0 4px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 75px;
+        padding-bottom: 75px;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 92%;
+        padding: 24px;
+        margin: 10px auto;
+    }
+
+    .top-section,
+    .top-section-r {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-title,
+    .text-title-r {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .image-section {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+        padding-right: 0;
+        order: -1;
+    }
+
+    .image-section-r {
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+        order: -1;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .text-section {
+        width: 100%;
+    }
+
+    .profile-summary-card,
+    .experience-card,
+    .section-divider {
+        width: 100%;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 16px;
+    }
+
+    p, ul li, ol li {
+        font-size: 16px;
+    }
+
+    .profile-summary-card {
+        padding: 20px;
+    }
+
+    .experience-card {
+        padding: 18px;
+    }
+}
