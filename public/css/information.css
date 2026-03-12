@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
     background-color: #F5EFE7;
@@ -44,19 +44,19 @@ body {
 h1 {
     margin-top: 2%;
     color: #213555;
-    font-size: 42px;
-    font-weight: bold;
-    font-family: 'Halant', serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
 h2 {
     margin-top: 3%;
     color: #3E5879;
-    line-height: 1.5;
-    font-size: 26px;
-    font-family: 'Halant', serif;
-    font-weight: bold;
+    line-height: 1.4;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     text-align: left;
     border-left: 4px solid #F95454;
     padding-left: 12px;
@@ -66,19 +66,19 @@ h2 {
 h3 {
     margin-top: 20px;
     color: #F95454;
-    line-height: 1.8;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Halant', serif;
+    line-height: 1.6;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
 p {
     color: #213555;
     text-align: justify;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.8;
-    font-family: 'Halant', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul li, ol li {
@@ -86,8 +86,8 @@ ul li, ol li {
     margin-left: 20px;
     margin-bottom: 6px;
     line-height: 1.7;
-    font-size: 17px;
-    font-family: 'Halant', serif;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Imagen circular */
@@ -197,14 +197,14 @@ ul li, ol li {
     font-size: 22px;
     font-weight: bold;
     color: #213555;
-    font-family: 'Halant', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .experience-role {
     font-size: 17px;
     color: #3E5879;
     font-weight: 600;
-    font-family: 'Halant', serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 14px;
 }
 
@@ -212,7 +212,7 @@ ul li, ol li {
     font-size: 15px;
     color: #F95454;
     font-weight: 700;
-    font-family: 'Halant', serif;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
 }
 
